@@ -50,6 +50,16 @@ body{
     animation-play-state: paused
 }
 
+h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: red;
+    margin: 0 auto;
+}
+
 /* Make it move */
 @keyframes marquee {
     0%   { text-indent: 27.5em }
