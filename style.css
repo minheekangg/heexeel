@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+}
+
+.full-screen{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: blue;
+}
+
+/* Make it a marquee */
+.marquee {
+    position: fixed;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: red; 
+    color: white;
+    box-sizing: border-box;
+    animation: marquee 50s linear infinite;
+}
+
+.left{
+    top: 100%;
+    width: 100vh;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+.right{
+    left: 100vw;
+    width: 100vh;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    z-index: 3;
+}
+
+.bottom{
+  top: auto;
+  bottom: 0;
+}
+
+
+.marquee:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -105em }
+}
